@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GH Studios — Building the future of AI and real estate</title>
+  <meta name="description" content="GH Studios builds AI-powered products redefining the future of real estate. Based in Australia.">
+  <meta property="og:title" content="GH Studios">
+  <meta property="og:description" content="Building the future of AI and real estate, one product at a time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Redirect mobile users to the mobile-optimised version -->
+  <script>if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||window.innerWidth<768)window.location.replace('mobile.html');</script>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo smooth-scroll">
+        <img src="assets/logo.png" alt="GH Studios" class="logo-img">
+        <span class="logo-wordmark">GH Studios</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#products" class="nav-link smooth-scroll">Products</a></li>
+        <li><a href="#about"    class="nav-link smooth-scroll">About</a></li>
+        <li><a href="#contact"  class="nav-link smooth-scroll">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section id="hero">
+
+    <!-- Layer 0 (deepest): faint drifting property card silhouettes -->
+    <div class="prop-cards-layer" id="prop-cards" aria-hidden="true">
+      <div class="prop-card pc-1"></div>
+      <div class="prop-card pc-2"></div>
+      <div class="prop-card pc-3"></div>
+      <div class="prop-card pc-4"></div>
+    </div>
+
+    <!-- Layer 1: neural-net canvas -->
+    <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+    <!-- Layer 2: vignette handled by CSS ::after -->
+
+    <!-- Layer 3: hero content -->
+    <div class="hero-inner" id="hero-inner">
+
+      <div class="hero-eyebrow">
+        <img src="assets/logo.png" alt="GH Studios" class="hero-logo-img">
+        <span class="hero-logo-name">GH Studios</span>
+      </div>
+
+      <!-- Word-by-word kinetic reveal injected by JS -->
+      <h1 class="hero-headline" id="hero-headline">The Future Of Real Estate.</h1>
+
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary smooth-scroll" id="hero-cta">See Our Work</a>
+        <div class="hero-badge-pill">
+          <span class="pill-dot" aria-hidden="true"></span>
+          2 Products live
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Animated scroll indicator -->
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-track">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======== PRODUCTS ======== -->
+  <section id="products" class="section">
+    <div class="section-bg" aria-hidden="true">
+      <div class="about-blob ab-1"></div>
+      <div class="about-blob ab-2"></div>
+      <div class="about-blob ab-3"></div>
+      <div class="about-ring ar-1"></div>
+      <div class="about-ring ar-2"></div>
+    </div>
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="eyebrow">Our Products</span>
+        <h2 class="section-title">Built to redefine<br>how people find property.</h2>
+      </header>
+
+      <div class="products-grid">
+        <!-- HomeSwipe -->
+        <article class="product-card reveal-card" data-stagger="0">
+          <div class="card-image">
+            <img src="assets/homeswipe.png" alt="HomeSwipe app screenshot" class="card-img"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'>assets/homeswipe.png</div>'">
+          </div>
+          <div class="card-body">
+            <span class="status-badge status-live">Live on iOS</span>
+            <h3 class="card-title">HomeSwipe</h3>
+            <p class="card-desc">AI-powered property discovery for Australia. A Tinder-style swipe mechanic that learns your taste and surfaces the homes you'll actually love.</p>
+            <a href="https://homeswipe.net.au"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary">Check It Out</a>
+          </div>
+        </article>
+
+        <!-- OffMarket -->
+        <article class="product-card reveal-card" data-stagger="150">
+          <div class="card-image">
+            <img src="assets/offmarket.png" alt="OffMarket platform screenshot" class="card-img"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'>assets/offmarket.png</div>'">
+          </div>
+          <div class="card-body">
+            <span class="status-badge status-soon">Coming Soon</span>
+            <h3 class="card-title">OffMarket</h3>
+            <p class="card-desc">Private listings platform for prestige real estate agents. Exclusive off-market access to properties that never reach the public portals.</p>
+            <button class="btn btn-ghost" disabled aria-disabled="true">Coming Soon</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section id="about" class="section">
+    <!-- Background decoration (aria-hidden, purely visual) -->
+    <div class="about-bg" aria-hidden="true">
+      <div class="about-blob ab-1"></div>
+      <div class="about-blob ab-2"></div>
+      <div class="about-blob ab-3"></div>
+      <div class="about-ring ar-1"></div>
+      <div class="about-ring ar-2"></div>
+    </div>
+    <div class="container">
+
+      <!-- Header -->
+      <header class="section-header reveal">
+        <span class="eyebrow">Who We Are</span>
+        <h2 class="section-title">Two 18-year-old founders,<br>big dreams.</h2>
+      </header>
+
+      <!-- Intro -->
+
+      <!-- Founder cards (between intro and stats) -->
+      <div class="founders-grid">
+
+        <!-- Harry Gibson — CTO -->
+        <div class="founder-card reveal-card" data-stagger="0">
+          <div class="founder-avatar">
+            <img src="assets/harry.jpg" alt="Harry Gibson" class="founder-photo"
+                 onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>assets/harry.jpg</div>'">
+          </div>
+          <h3 class="founder-name">Harry Gibson</h3>
+          <p class="founder-role">CTO &amp; Co-founder</p>
+          <p class="founder-bio">Engineering the technology that powers GH Studios' products.</p>
+        </div>
+
+        <!-- Will Humphrey — CEO -->
+        <div class="founder-card reveal-card" data-stagger="150">
+          <div class="founder-avatar">
+            <img src="assets/will.jpg" alt="Will Humphrey" class="founder-photo"
+                 onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>assets/will.jpg</div>'">
+          </div>
+          <h3 class="founder-name">Will Humphrey</h3>
+          <p class="founder-role">CEO &amp; Co-founder</p>
+          <p class="founder-bio">Driving the vision and strategy behind GH Studios.</p>
+        </div>
+
+      </div>
+
+      <!-- Stats strip -->
+      <div class="about-stats reveal">
+        <div class="about-stat">
+          <span class="astat-num">Perth</span>
+          <span class="astat-label">Western Australia</span>
+        </div>
+        <div class="astat-divider"></div>
+        <div class="about-stat">
+          <span class="astat-num">2026</span>
+          <span class="astat-label">Founded</span>
+        </div>
+        <div class="astat-divider"></div>
+        <div class="about-stat">
+          <span class="astat-num">1</span>
+          <span class="astat-label">Product live</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section id="contact" class="section">
+
+    <!-- Background aurora (same system as other sections) -->
+    <div class="about-bg" aria-hidden="true">
+      <div class="about-blob ab-1"></div>
+      <div class="about-blob ab-2"></div>
+      <div class="about-ring ar-1"></div>
+    </div>
+
+    <div class="container">
+      <div class="contact-block reveal">
+
+        <!-- Animated "coming soon" badge -->
+        <div class="contact-badge">
+          <span class="contact-badge-dot"></span>
+          What's Next
+        </div>
+
+        <h2 class="section-title contact-title">New products<br>coming soon.</h2>
+        <p class="contact-sub">Follow the founders to stay across everything we're building.</p>
+
+        <!-- Founder social cards -->
+        <div class="social-grid">
+
+          <!-- Harry -->
+          <div class="social-card reveal-card" data-stagger="0">
+            <div class="social-avatar">
+              <img src="assets/harry.jpg" alt="Harry Gibson" class="founder-photo"
+                   onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>H</div>'">
+            </div>
+            <p class="social-name">Harry Gibson</p>
+            <p class="social-role">CTO &amp; Co-founder</p>
+            <div class="social-links">
+              <a href="https://instagram.com/harrygibson._" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-ig" aria-label="Harry on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+                <span>harrygibson._</span>
+              </a>
+              <a href="https://tiktok.com/@harrygibson._" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-tt" aria-label="Harry on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 106.34 6.34V8.87a8.18 8.18 0 004.78 1.52V7a4.85 4.85 0 01-1.81-.31z"/>
+                </svg>
+                <span>harrygibson._</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Will -->
+          <div class="social-card reveal-card" data-stagger="150">
+            <div class="social-avatar">
+              <img src="assets/will.jpg" alt="Will Humphrey" class="founder-photo"
+                   onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>W</div>'">
+            </div>
+            <p class="social-name">Will Humphrey</p>
+            <p class="social-role">CEO &amp; Co-founder</p>
+            <div class="social-links">
+              <a href="https://instagram.com/will.humphrey_" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-ig" aria-label="Will on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+                <span>will.humphrey_</span>
+              </a>
+              <a href="https://tiktok.com/@william.humphrey_" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-tt" aria-label="Will on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 106.34 6.34V8.87a8.18 8.18 0 004.78 1.52V7a4.85 4.85 0 01-1.81-.31z"/>
+                </svg>
+                <span>william.humphrey_</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo smooth-scroll">
+          <img src="assets/logo.png" alt="GH Studios" class="logo-img-sm"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="footer-wordmark" style="display:none">GH Studios</span>
+        </a>
+        <p class="footer-copy">&copy; 2025 GH Studios. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

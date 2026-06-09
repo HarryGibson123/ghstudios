@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GH Studios — The Future of Real Estate</title>
+  <meta name="description" content="GH Studios builds AI-powered products redefining real estate. Based in Australia.">
+  <!-- Redirect desktop users back to the full site -->
+  <script>if(!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)&&window.innerWidth>=768)window.location.replace('index.html');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo smooth-scroll">
+        <img src="assets/logo.png" alt="GH Studios" class="logo-img">
+        <span class="logo-wordmark">GH Studios</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#products" class="nav-link smooth-scroll">Products</a></li>
+      <li><a href="#about"    class="nav-link smooth-scroll">About</a></li>
+      <li><a href="#contact"  class="nav-link smooth-scroll">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <!-- Aurora background blobs (CSS only, GPU-friendly) -->
+    <div class="m-aurora" aria-hidden="true">
+      <div class="m-blob mb-1"></div>
+      <div class="m-blob mb-2"></div>
+      <div class="m-blob mb-3"></div>
+      <div class="m-ring mr-1"></div>
+    </div>
+    <div class="prop-cards-layer" aria-hidden="true">
+      <div class="prop-card pc-1"></div>
+      <div class="prop-card pc-2"></div>
+    </div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero-inner" id="hero-inner">
+      <div class="hero-eyebrow">
+        <img src="assets/logo.png" alt="GH Studios" class="hero-logo-img">
+        <span class="hero-logo-name">GH Studios</span>
+      </div>
+
+      <h1 class="hero-headline" id="hero-headline">The Future Of Real Estate.</h1>
+
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary smooth-scroll">See Our Work</a>
+        <div class="hero-badge-pill">
+          <span class="pill-dot" aria-hidden="true"></span>
+          1 Product live
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-track"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="section">
+    <div class="m-aurora" aria-hidden="true">
+      <div class="m-blob mb-1"></div>
+      <div class="m-blob mb-2"></div>
+      <div class="m-ring mr-1"></div>
+    </div>
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="eyebrow">Our Products</span>
+        <h2 class="section-title">Built to redefine<br>how people find property.</h2>
+      </header>
+      <div class="products-grid">
+        <article class="product-card reveal-card" data-stagger="0">
+          <div class="card-image">
+            <img src="assets/homeswipe.png" alt="HomeSwipe" class="card-img"
+                 onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:rgba(240,240,250,0.3);font-size:0.75rem;\'>HomeSwipe</div>'">
+          </div>
+          <div class="card-body">
+            <span class="status-badge status-live">Live on iOS</span>
+            <h3 class="card-title">HomeSwipe</h3>
+            <p class="card-desc">AI-powered property discovery for Australia. Swipe to find homes you'll actually love.</p>
+            <a href="https://homeswipe.net.au" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:0.9rem;padding:0.75rem 1.5rem;">Check It Out</a>
+          </div>
+        </article>
+        <article class="product-card reveal-card" data-stagger="100">
+          <div class="card-image">
+            <img src="assets/offmarket.png" alt="OffMarket" class="card-img"
+                 onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:rgba(240,240,250,0.3);font-size:0.75rem;\'>OffMarket</div>'">
+          </div>
+          <div class="card-body">
+            <span class="status-badge status-soon">Coming Soon</span>
+            <h3 class="card-title">OffMarket</h3>
+            <p class="card-desc">Private listings platform for prestige real estate agents. Exclusive off-market access.</p>
+            <button class="btn-ghost" disabled>Coming Soon</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-tinted">
+    <div class="m-aurora" aria-hidden="true">
+      <div class="m-blob mb-2"></div>
+      <div class="m-blob mb-3"></div>
+      <div class="m-ring mr-1"></div>
+    </div>
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="eyebrow">Who We Are</span>
+        <h2 class="section-title">Young founders. Real products. Big ambitions.</h2>
+      </header>
+      <div class="founders-grid">
+        <div class="founder-card reveal-card" data-stagger="0">
+          <div class="founder-avatar">
+            <img src="assets/harry.jpg" alt="Harry Gibson" class="founder-photo"
+                 onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>H</div>'">
+          </div>
+          <h3 class="founder-name">Harry Gibson</h3>
+          <p class="founder-role">CTO &amp; Co-founder</p>
+          <p class="founder-bio">Engineering the technology that powers GH Studios' products.</p>
+        </div>
+        <div class="founder-card reveal-card" data-stagger="100">
+          <div class="founder-avatar">
+            <img src="assets/will.jpg" alt="Will Humphrey" class="founder-photo"
+                 onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>W</div>'">
+          </div>
+          <h3 class="founder-name">Will Humphrey</h3>
+          <p class="founder-role">CEO &amp; Co-founder</p>
+          <p class="founder-bio">Driving the vision and strategy behind GH Studios.</p>
+        </div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="about-stat">
+          <span class="astat-num">Perth</span>
+          <span class="astat-label">Western Australia</span>
+        </div>
+        <div class="about-stat">
+          <span class="astat-num">2026</span>
+          <span class="astat-label">Founded</span>
+        </div>
+        <div class="about-stat">
+          <span class="astat-num">1</span>
+          <span class="astat-label">Product live</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="m-aurora" aria-hidden="true">
+      <div class="m-blob mb-1"></div>
+      <div class="m-blob mb-3"></div>
+    </div>
+    <div class="container">
+      <div class="contact-block reveal">
+        <div class="contact-badge">
+          <span class="contact-badge-dot"></span>
+          What's Next
+        </div>
+        <h2 class="section-title contact-title">New products<br>coming soon.</h2>
+        <p class="contact-sub">Follow the founders to stay across everything we're building.</p>
+        <div class="social-grid">
+          <!-- Harry -->
+          <div class="social-card reveal-card" data-stagger="0">
+            <div class="social-avatar">
+              <img src="assets/harry.jpg" alt="Harry Gibson" class="founder-photo"
+                   onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>H</div>'">
+            </div>
+            <p class="social-name">Harry Gibson</p>
+            <p class="social-role">CTO &amp; Co-founder</p>
+            <div class="social-links">
+              <a href="https://instagram.com/harrygibson._" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-ig">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                <span>harrygibson._</span>
+              </a>
+              <a href="https://tiktok.com/@harrygibson._" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-tt">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 106.34 6.34V8.87a8.18 8.18 0 004.78 1.52V7a4.85 4.85 0 01-1.81-.31z"/></svg>
+                <span>harrygibson._</span>
+              </a>
+            </div>
+          </div>
+          <!-- Will -->
+          <div class="social-card reveal-card" data-stagger="100">
+            <div class="social-avatar">
+              <img src="assets/will.jpg" alt="Will Humphrey" class="founder-photo"
+                   onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>W</div>'">
+            </div>
+            <p class="social-name">Will Humphrey</p>
+            <p class="social-role">CEO &amp; Co-founder</p>
+            <div class="social-links">
+              <a href="https://instagram.com/will.humphrey_" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-ig">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                <span>will.humphrey_</span>
+              </a>
+              <a href="https://tiktok.com/@william.humphrey_" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-tt">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 106.34 6.34V8.87a8.18 8.18 0 004.78 1.52V7a4.85 4.85 0 01-1.81-.31z"/></svg>
+                <span>william.humphrey_</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo smooth-scroll">
+          <img src="assets/logo.png" alt="GH Studios" class="logo-img-sm"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="footer-wordmark" style="display:none">GH Studios</span>
+        </a>
+        <p class="footer-copy">&copy; 2025 GH Studios. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  'use strict';
+  const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const t = document.querySelector(this.getAttribute('href'));
+      if (!t) return;
+      e.preventDefault();
+      t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      navLinksEl.classList.remove('open');
+      hamburger.classList.remove('open');
+    });
+  });
+
+  /* Nav */
+  const nav = document.getElementById('nav');
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(open));
+    navLinksEl.classList.toggle('open', open);
+  });
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* Scroll reveals */
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      setTimeout(() => el.classList.add('in'), parseInt(el.dataset.stagger || 0));
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal, .reveal-card').forEach(el => obs.observe(el));
+
+  /* Headline word reveal */
+  (function() {
+    const h = document.getElementById('hero-headline');
+    if (!h || REDUCED) return;
+    const words = h.textContent.trim().split(' ');
+    h.innerHTML = words.map((w, i) =>
+      `<span class="hero-word"><span class="word-inner${i === 1 ? ' word-blue' : ''}">${w}</span></span>`
+    ).join(' ');
+    h.querySelectorAll('.word-inner').forEach((el, i) => {
+      setTimeout(() => el.classList.add('revealed'), 350 + i * 110);
+    });
+  })();
+
+  /* Lightweight particle canvas */
+  (function() {
+    const canvas = document.getElementById('particle-canvas');
+    if (!canvas || REDUCED) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, nodes = [], running = true, raf;
+    function resize() {
+      W = canvas.width = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+    function makeNode() {
+      const a = Math.random() * Math.PI * 2, s = 0.15 + Math.random() * 0.2;
+      return { x: Math.random()*W, y: Math.random()*H, vx: Math.cos(a)*s, vy: Math.sin(a)*s, r: Math.random()*1.2+0.4, op: Math.random()*0.35+0.1 };
+    }
+    function tick() {
+      if (!running) return;
+      ctx.clearRect(0,0,W,H);
+      nodes.forEach(n => {
+        n.x += n.vx; n.y += n.vy;
+        if (n.x<0||n.x>W) n.vx*=-1;
+        if (n.y<0||n.y>H) n.vy*=-1;
+        for (let j = nodes.indexOf(n)+1; j < nodes.length; j++) {
+          const dx=n.x-nodes[j].x, dy=n.y-nodes[j].y, d=Math.sqrt(dx*dx+dy*dy);
+          if (d < 90) {
+            ctx.strokeStyle=`rgba(59,130,246,${(1-d/90)*0.12})`;
+            ctx.lineWidth=0.6;
+            ctx.beginPath();ctx.moveTo(n.x,n.y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();
+          }
+        }
+        ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+        ctx.fillStyle=`rgba(59,130,246,${n.op})`;ctx.fill();
+      });
+      raf = requestAnimationFrame(tick);
+    }
+    document.addEventListener('visibilitychange', () => {
+      running = !document.hidden;
+      if (running) raf = requestAnimationFrame(tick);
+    });
+    window.addEventListener('resize', resize, { passive: true });
+    resize();
+    nodes = Array.from({ length: 28 }, makeNode);
+    tick();
+  })();
+  </script>
+</body>
+</html>
